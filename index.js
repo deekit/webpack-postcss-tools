@@ -126,7 +126,7 @@ function unwrapUrl(params) {
  * [url-to-req]: https://github.com/webpack/css-loader/blob/7b50d4f569adcaf5bf185180c15435bde03f4de7/index.js#L37
  */
 function prependTildesToImports(styles) {
-  styles.eachAtRule(function (atRule) {
+  styles.walkAtRules(function (atRule) {
     if (atRule.name !== 'import')
       return;
 
